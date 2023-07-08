@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidade</title>
+</head>
+<body>
+    <h1>Sistemas de nacionalidade</h1>
+    Escreva aqui o país : <input type="text" name="nomedopais" id="nome-pais">
+    <input type="button" value="verificar" onclick="verificação()">
+    <div id="resultado"></div>
+    <script>
+       function verificação(){
+        var nomePais = window.document.querySelector('input#nome-pais')
+        var resultado = window.document.querySelector('div#resultado')
+        var nação = nomePais.value;
+        resultado.innerHTML = `seu pais é <strong>${nação}<strong/>`
+        if (nação == "brasil") {
+            resultado.innerHTML += ' vc é brasileiro '
+        } else 
+        resultado.innerHTML = ' vc é gringo'
+        
+        
+    }
+     
+    </script>
+</body>
+</html>
